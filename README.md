@@ -2,7 +2,8 @@
 
 ## Get this Branch:
 
-* Run this command in your terminal window inside the containerize-it folder `git checkout calculator`
+* Run this command in your terminal window inside the containerize-it folder 
+* `git checkout calculator`
 
 ## Calculator challenge:
 
