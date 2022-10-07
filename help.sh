@@ -1,0 +1,13 @@
+#!/bin/bash
+echo ""
+echo "========================="
+echo "Calculator, Version 1.0"
+echo "========================="
+echo "Usage : docker run -it calculator [operation].sh [value_1] [value_2]"
+echo ""
+echo "operation options:"
+echo "  sum"
+echo "  subtract"
+echo "  multiply"
+echo "  divide"
+echo ""
