@@ -9,3 +9,6 @@
 
 * Deploy the `index.html` file to an apache web server
 * Use the following image from docker hub: https://hub.docker.com/_/httpd
+
+## Hints:
+* Apache will serve html from `/usr/local/apache2/htdocs/`
