@@ -6,3 +6,6 @@
 * For example `docker run -it calculator subtract.sh 10 4`
 * Output: `10 - 4 is: 6`
 * Choose any linux container for this challenge for a base image
+
+### Bonus
+* When calling with no additional parameters e.g (`docker run -it calculator`) execute the `help.sh` file to show the help
