@@ -1,47 +1,69 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>JS Counter</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
 
-  <body onload="incrementCount(10)">
-    <div class="main_container" id="id_main_container">
-      <div class="container_inner" id="display_div_id">
-      </div>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Lato", sans-serif;
+        font-size: 20pt;
+        font-weight: normal;
+        background: lightblue; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(
+          -90deg,
+          lightblue,
+          black
+        ); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(
+          -90deg,
+          lightblue,
+          black
+        ); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(
+          -90deg,
+          lightblue,
+          black
+        ); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(-90deg, lightblue, black); /* Standard syntax */
+      }
+
+      .main {
+        margin: 100px auto;
+        text-align: center;
+      }
+
+      button {
+        padding: 20px;
+        background: transparent;
+        text-shadow: 1px 1px 1px #202020;
+        font-family: "Lato", sans-serif;
+        font-size: 18pt;
+        border: 1px solid lightblue;
+        color: lightblue;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+
+    <h3>Click Counter</h3>
+    <button id="clickme">Click me: 0</button>
+
+  </div>
+
+  <script>
+    var button = document.getElementById("clickme"),
+      count = 0;
+    button.onclick = function() {
+      count += 1;
+      button.innerHTML = "Click me: " + count;
+    };
+  </script>
+
+</body>
+
 </html>
-
-<script>
-  var counter_list = [10,10000,10000];
-  var str_counter_0 = counter_list[0];
-  var str_counter_1 = counter_list[1];
-  var str_counter_2 = counter_list[2];
-  var display_str = "";
-  var display_div = document.getElementById("display_div_id");
-
-  function incrementCount(current_count){
-    setInterval(function(){
-      // clear count
-      while (display_div.hasChildNodes()) {
-          display_div.removeChild(display_div.lastChild);
-      }
-      str_counter_0++;
-      if (str_counter_0 > 99) {
-        str_counter_0 = 0; // reset count
-        str_counter_1++;    // increase next count
-      }
-      if(str_counter_1>99999){
-        str_counter_2++;
-      }
-      display_str = str_counter_2.toString() + str_counter_1.toString() + str_counter_0.toString();
-      for (var i = 0; i < display_str.length; i++) {
-        var new_span = document.createElement('span');
-        new_span.className = 'num_tiles';
-        new_span.innerText = display_str[i];
-        display_div.appendChild(new_span);
-      }
-    },1000);
-  }
-</script>
