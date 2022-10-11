@@ -11,4 +11,5 @@
 
 * See `Dockerfile`
 * Run `docker build -t calculator .`
-* Run 
+* Run `docker run calculator` to display help
+* Run `docker run calculator multiply.sh 4 5`
